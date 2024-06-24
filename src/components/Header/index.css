@@ -1,0 +1,70 @@
+.navbar {
+    background-color: #ffe300;
+    height: 35px;
+    padding: 10px;
+    color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto";
+    
+}
+@media (min-width: 768px) {
+    .navbar {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+.nav-logo-name {
+    display: flex;
+}
+.nav-logo {
+    border: 1px solid #000000;
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    align-self: center;
+}
+
+.nav-heading {
+    align-self: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+.nav-home-booklist-cart-logos {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-list-element {
+    list-style-type: none;
+    margin-right: 20px;
+}
+.nav-icon {
+    margin-right: 10px;
+    font-size: 30px;
+    color: #000000;
+}
+@media (min-width: 768px){
+    .nav-icon {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+}
+.nav-icon-text {
+    display: none;
+}
+@media (min-width: 768px) {
+    .nav-icon-text {
+        display: inline;
+        color: #000000;
+        font-size: 15px;
+    }
+}
+.nav-link-ele {
+    text-decoration: none;
+}
