@@ -17,9 +17,11 @@ class Cart extends Component {
                         removeAllCartItems()
                     }
                     let total = 0
+                    let totalCost = 0
                     cartList.forEach(eachCartItem => {
                         const cost = eachCartItem.price.split("$")
-                        total += Math.round(cost[1] * eachCartItem.quantity)
+                        total += cost[1] * eachCartItem.quantity
+                        totalCost = total.toFixed(2)
                     })
                     return (
                         <>
@@ -27,7 +29,7 @@ class Cart extends Component {
                             <div className="cart-container">
                                 {showEmptyView ? (
                                     <div className="cart-empty-container">
-                                        <h1>Your Cart Is Empty</h1>
+                                        <h1 className="cart-heading">Your Cart Is Empty</h1>
                                         <Link to="/books">
                                             <button type="button" className="cart-shop-now-button">Shop Now</button>
                                         </Link>
@@ -60,14 +62,15 @@ class Cart extends Component {
                                                 </h1>
                                                 <div className="summery-total-amount">
                                                     <p className="summery-amount-heading">Amount Payable: </p>
-                                                    <p className="summery-amount">$ {total}</p>
+                                                    <p className="summery-amount">$ {totalCost}</p>
                                                 </div>
                                                 <p className="cart-items-count">{cartList.length} Items in cart</p>
                                                 <p>Tax included. Shipping calculated at checkout.</p>
-                                                <button type="button" className="checkout-button">
-                                                    Checkout
-                                                </button>
-
+                                                <Link to="/checkout">
+                                                    <button type="button" className="checkout-button">
+                                                        Checkout
+                                                    </button>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>

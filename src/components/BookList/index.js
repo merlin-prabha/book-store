@@ -4,14 +4,21 @@ import './index.css'
 
 import Header from "../Header";
 
+const apiStatusConstants = {
+    initial: 'INITIAL',
+    success: 'SUCCESS',
+    inProgress: 'IN_PROGRESS',
+  }
+
 class BookList extends Component {
-    state = {booksData: []}
+    state = {booksData: [], apiStatus: apiStatusConstants.initial}
 
     componentDidMount () {
         this.getBooksList()
     }
 
     getBooksList = async () => {
+        this.setState({apiStatus: apiStatusConstants.inProgress})
         const apiUrl = "https://api.itbook.store/1.0/new"
         const options = {
             method: 'GET'
@@ -31,7 +38,7 @@ class BookList extends Component {
                 url: each.url,
             }))
         })
-        this.setState({booksData: updatedData})  
+        this.setState({booksData: updatedData, apiStatus: apiStatusConstants.success})  
     }
 
     renderBookList = () => {
@@ -51,6 +58,27 @@ class BookList extends Component {
             </ul>
         )
     }
+
+    renderLoadingView = () => (
+        <div className="products-details-loader-container loader" data-testid="loader">
+          Loading....
+        </div>
+      )
+
+    renderResult = () => {
+        const {apiStatus} = this.state
+
+    switch (apiStatus) {
+      case apiStatusConstants.success:
+        return this.renderBookList()
+      case apiStatusConstants.inProgress:
+        return this.renderLoadingView()
+      default:
+        return null
+    }
+
+    }
+
     render() {
         const {booksData} = this.state
         console.log(booksData)
@@ -60,7 +88,7 @@ class BookList extends Component {
                 <div className="book-list-container">
                     <h1 className="book-list-heading">BookList</h1>
                     <div className="book-list">
-                        {this.renderBookList()}
+                        {this.renderResult()}
                     </div>
                     
                 </div>

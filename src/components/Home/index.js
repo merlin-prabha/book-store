@@ -16,7 +16,7 @@ class Home extends Component {
                 <div className="home-small-background">
                     <div className="home-text">
                         <h1 className="home-heading">Welcome to the Bookstore App!</h1>
-                        <p>
+                        <p className="home-description">
                             Discover a world of books at your fingertips with our bookstore application. 
                             Whether you're an avid reader or just starting your literary journey, 
                             our app offers a curated collection of books across genres, making it easy to find your next favorite read.

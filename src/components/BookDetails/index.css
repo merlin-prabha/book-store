@@ -12,7 +12,7 @@
 .book-details-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ffe300;
+    box-shadow: 0px 4px 16px 0px #eaebed;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 30px;
@@ -42,11 +42,30 @@ span {
     font-size: 15px;
     font-weight: 300 !important;
 }
+.book-detail-heading {
+    text-align: center;
+}
+@media (min-width: 768px) {
+    span {
+        font-size: 20px;
+    }
+    .book-detail-sub-heading {
+        font-size: 23px;
+    }
+    .book-detail-heading {
+        font-size: 30px;
+        text-align: center;
+    }
+}
 .add-to-cart-button {
     background-color: #ffe300;
     padding: 10px;
     border-radius: 10px;
     border-width: 0px;
     align-self: flex-end;
-    font-weight: 500;
+    font-weight: 600;
+}
+.loader {
+    font-size: 20px;
+    margin-top: 25%;
 }

@@ -25,10 +25,21 @@
     .home-text {
         margin-top: 100px;
     }
+    .home-heading {
+        font-size: 30px;
+    }
+    .home-description {
+        font-size: 20px;
+    }
 }
 .home-button {
     background-color: #ffe300;
     padding: 10px;
     border-radius: 10px;
     border-width: 0px;
+}
+@media (min-width: 768px) {
+    .home-button {
+        font-size: 20px;
+    }
 }

@@ -42,7 +42,7 @@ class BookDetails extends Component {
     }
 
     renderLoadingView = () => (
-        <div className="products-details-loader-container" data-testid="loader">
+        <div className="products-details-loader-container loader" data-testid="loader">
           Loading....
         </div>
       )
@@ -115,7 +115,7 @@ class BookDetails extends Component {
             <div>
                 <Header />
                 <div className="book-details">
-                    <h1>Book Details</h1>
+                    <h1 className="book-detail-heading">Book Details</h1>
                     <div className="book-detail-container">
                         {this.renderResult()}
                     </div>
