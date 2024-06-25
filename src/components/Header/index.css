@@ -68,3 +68,17 @@
 .nav-link-ele {
     text-decoration: none;
 }
+.header-cart-count {
+    background-color: #000000;
+    color: #ffe300;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 50%;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    margin-left: 8px;
+
+
+}

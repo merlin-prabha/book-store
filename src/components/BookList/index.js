@@ -44,6 +44,7 @@ class BookList extends Component {
                             <img src={eachBook.image} alt="book" className="book-image" />
                             <p className="book-heading">{eachBook.title}</p>
                             <p className="book-price">{eachBook.price}</p>
+                            <button type="button" className="book-button">View Details</button>
                         </Link>
                     </li>
                 ))}

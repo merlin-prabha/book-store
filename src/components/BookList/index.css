@@ -17,13 +17,18 @@
 }
 .book-item {
     border: 1px solid #ffe300;
-    width: 30%;
+    width: 50%;
     border-radius: 10px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     margin-right: 30px;
     margin-bottom: 30px;
+}
+@media (min-width: 768px){
+    .book-item {
+        width: 30%;
+    }
 }
 .book-image {
     align-self: center;
@@ -39,4 +44,12 @@
 .book-link-item {
     text-decoration: none;
     color: #000000;
+}
+.book-button {
+    background-color: #ffe300;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 0px;
+    align-self: flex-end;
+    font-weight: 500;
 }

@@ -3,10 +3,28 @@ import './index.css'
 import { FaHome } from "react-icons/fa";
 import { SiBookstack } from "react-icons/si";
 import { FaCartShopping } from "react-icons/fa6";
+import CartContext from '../../context/CartContext';
 
-const Header = () => (
+const Header = () => {
+    const renderCartItemCount = () => {
+        <CartContext.Consumer>
+            {value => {
+                const {cartList} = value 
+                const cartItemCount = cartList.length 
+                console.log(cartItemCount)
+
+                return (
+                    <>
+                        {cartItemCount > 0 ? (
+                            <span className='header-cart-count'>{cartList.length}</span>
+                        ) : null}
+                    </>
+                )
+            }}
+        </CartContext.Consumer>
+    }
+    return (
     <nav className='navbar'>
-
             <div className='nav-logo-name'>
                 <div className='nav-logo'>B</div>
                 <h1 className='nav-heading'>BOOKSTORE</h1>
@@ -27,6 +45,7 @@ const Header = () => (
                 <Link to="/cart" className="nav-link-ele">
                     <li className='nav-list-element'>
                         <FaCartShopping className='nav-icon' />
+                        {renderCartItemCount()}
                         <p className='nav-icon-text'>Cart</p>
                     </li>
                 </Link>
@@ -34,6 +53,6 @@ const Header = () => (
             </ul>
 
     </nav>
-)
+)}
 
 export default Header

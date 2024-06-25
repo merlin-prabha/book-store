@@ -1,0 +1,108 @@
+.cart-item {
+    list-style-type: none;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 4px 16px 0px #eaebed;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.cart-item-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 4px;
+    align-self: center;
+    margin-right: 10px;
+
+}
+.cart-item-detail-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-item-detail-heading {
+    font-size: 13px;
+    width: 30%;
+    
+}
+@media (min-width: 768px) {
+    .cart-item-detail-heading {
+        font-size: 20px;
+        width: 50%;
+        text-align: left;
+    }
+    .cart-item-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+.cart-item-quantity-container {
+    display: flex;
+}
+.quantity-controller-button {
+    padding: 0;
+    border-width: 0px;
+    background-color: transparent;
+  }
+.cart-quantity {
+    color: #52606d;
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 500;
+    margin: 8px;
+    line-height: 1.3;
+}
+.total-price-remove-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-total-price {
+    color: #000000;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 100px;
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+.cart-total-price {
+    font-size: 18px;
+}
+}
+
+.remove-button {
+    background-color: transparent;
+    color: #334155;
+    font-family: 'Roboto';
+    font-size: 10px;
+    line-height: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+.remove-button {
+    display: none;
+}
+}
+.delete-button {
+    display: none;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .delete-button {
+        display: inline;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-left: 32px;
+    }
+}
