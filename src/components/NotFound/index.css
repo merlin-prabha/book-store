@@ -1,0 +1,43 @@
+.back-icon {
+    margin-right: 20px;
+}
+.back-button {
+    background-color: #ffe300;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 0px;
+    font-weight: 500;
+    display: inline;
+    justify-content: stretch;
+
+}
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
+    font-family: "Roboto";
+    padding: 50px;
+}
+.not-found-heading {
+    align-self: center;
+    font-size: 30px;
+}
+@media (min-width: 768px) {
+    .not-found-container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .not-found-heading {
+        font-size: 30px;
+    }
+}
+.not-found-para {
+    font-size: 20px;
+    text-align: center;
+}
+.link-ele {
+    text-decoration: none;
+    color: #000000;
+}

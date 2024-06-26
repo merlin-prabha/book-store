@@ -11,7 +11,6 @@ const CartItem = props => (
             const {cartItemDetails} = props 
             const {isbn13, image, title, price, quantity} = cartItemDetails
             const cost = price.split("$")
-            console.log(cost)
 
             const onRemoveCartItem = () => {
                 removeCartItem(isbn13)
@@ -51,7 +50,7 @@ const CartItem = props => (
                         </div>
                         <div className="total-price-remove-container">
                           <p className="cart-total-price">$ {(cost[1] * quantity).toFixed(2)}/-</p>
-                          <button className='remove-button'>Remove</button>
+                          <button className='remove-button' type="button" onClick={onRemoveCartItem}>Remove</button>
                         </div>
                         <button
                           className="delete-button"

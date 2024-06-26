@@ -188,10 +188,12 @@ h1{
     color: #000000;
 }
 .error-msg {
-    color: rgb(100, 22, 22);
+    color: rgb(202, 44, 44);
+    text-align: center;
 }
 .order-confirmed {
     font-size: 32px;
-    color: #615606;
+    color: #c0ac16;
     margin: 20px;
+    text-align: center;
 }

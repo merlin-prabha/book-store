@@ -40,10 +40,10 @@ class Checkout extends Component {
         e.preventDefault()
         const {email, name, address, pincode, city, phone} = this.state
         if (email !== "" && name !== "" && address !== "" && pincode !== "" && city !== "" && phone !== "") {
-            this.setState({orderConfirmed: true})
+            this.setState(prevState => ({orderConfirmed: !prevState.orderConfirmed}))
         }
         else {
-            this.setState({error: true})
+            this.setState(prevState => ({error: !prevState.error}))
         }
     }
 

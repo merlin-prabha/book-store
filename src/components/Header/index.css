@@ -39,15 +39,26 @@
 .nav-home-booklist-cart-logos {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .nav-list-element {
     list-style-type: none;
     margin-right: 20px;
 }
+.cart {
+    display: flex;
+    align-self: center;
+    align-items: center;
+
+}
 .nav-icon {
     margin-right: 10px;
     font-size: 30px;
     color: #000000;
+}
+.cart-icon {
+    margin-right: 0px !important;
+    align-self: center;
 }
 @media (min-width: 768px){
     .nav-icon {
@@ -63,6 +74,8 @@
         display: inline;
         color: #000000;
         font-size: 15px;
+        margin-left: 5px;
+        align-self: center;
     }
 }
 .nav-link-ele {
@@ -78,7 +91,12 @@
     padding-top: 2px;
     padding-right: 5px;
     padding-bottom: 2px;
-    margin-left: 8px;
+    margin-bottom: 30px;
+    align-self: flex-start;
 
-
+}
+@media (min-width: 768px) {
+    .header-cart-count {
+        font-size: 10px;
+    }
 }

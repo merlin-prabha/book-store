@@ -76,7 +76,6 @@ class App extends Component {
 
   render() {
     const {cartList} = this.state
-    console.log(cartList)
     return (
       <CartContext.Provider
         value = {{

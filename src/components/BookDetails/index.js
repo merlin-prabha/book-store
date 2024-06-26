@@ -30,10 +30,8 @@ class BookDetails extends Component {
             method: 'GET'
         }
         const response = await fetch(url, options)
-        console.log(response)
         if (response.ok) {
             const fetchedData = await response.json()
-            console.log(fetchedData)
             this.setState({bookDetails: fetchedData, apiStatus: apiStatusConstants.success})
         }
         else {
@@ -72,7 +70,6 @@ class BookDetails extends Component {
                     const {addCartItem} = value 
                     const onClickAddToCart = () => {
                         addCartItem({...bookDetails, quantity})
-                        console.log("clicked")
                     }
                     return (
                         <div className="book-details-card">

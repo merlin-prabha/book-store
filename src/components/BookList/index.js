@@ -81,7 +81,6 @@ class BookList extends Component {
 
     render() {
         const {booksData} = this.state
-        console.log(booksData)
         return (
             <div>
                 <Header />
